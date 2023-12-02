@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Подбор программы Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
@@ -50,17 +50,17 @@
 
             <label class="blank__description">
               ИМЯ:*
-              <input class="blank__input" type="text" name="name-of-cat" value="барсик" required>
+              <input class="blank__input input-blank" type="text" name="name-of-cat" value="барсик" required>
             </label>
 
             <label class="blank__description">
               Вес (кг):*
-              <input class="blank__input" type="number" name="weight-of-cat" value="7" required>
+              <input class="blank__input input-blank" type="number" name="weight-of-cat" value="7" required>
             </label>
 
             <label class="blank__description">
               Возраст (лет):
-              <input class="blank__input" type="number" name="age-of-cat" value="7">
+              <input class="blank__input input-blank" type="number" name="age-of-cat" value="7">
             </label>
           </fieldset>
 
@@ -70,23 +70,23 @@
             <ul class="blank__list">
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="radio" name="type-of-program" value="weight-loss" checked>
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">похудение</span>
+                  <input class="visually-hidden" type="radio" name="type-of-program" value="weight-loss" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">похудение</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="radio" name="type-of-program" value="weight-gain">
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">Набор массы</span>
+                  <input class="visually-hidden" type="radio" name="type-of-program" value="weight-gain">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Набор массы</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="radio" name="type-of-program" value="advice">
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">Не знаю (Нужен ваш совет)</span>
+                  <input class="visually-hidden" type="radio" name="type-of-program" value="advice">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -97,20 +97,20 @@
 
             <label class="blank__description">
               E-mail:*
-              <input class="blank__input" type="email" name="email" required>
+              <input class="blank__input input-blank" type="email" name="email" required>
             </label>
 
             <label class="blank__description">
               Телефон:*
-              <input class="blank__input" type="tel" id="telephone" name="telephone" required>
+              <input class="blank__input input-blank" type="tel" id="telephone" name="telephone" required>
             </label>
           </fieldset>
 
-          <fieldset class="form__blank form__blank--comments blank">
-            <legend class="blank__title">Комментарий</legend>
+          <div class="form__blank form__blank--comments blank">
+            <h2 class="blank__title">Комментарий</h2>
             <label class="visually-hidden" for="comment">Напишите о своем коте</label>
-            <textarea class="blank__comment" name="comment" id="comment" cols="30" rows="10"></textarea>
-          </fieldset>
+            <textarea class="blank__comment input-blank" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </div>
 
           <fieldset class="form__blank form__blank--extra blank">
             <legend class="blank__title">Дополнительно</legend>
@@ -118,30 +118,30 @@
             <ul class="blank__list">
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="checkbox" name="sweetener" checked>
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">сахарозаменитель</span>
+                  <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">сахарозаменитель</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="checkbox" name="drinking-water">
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">питьевая вода</span>
+                  <input class="visually-hidden" type="checkbox" name="drinking-water">
+                  <span class="control__mark"></span>
+                  <span class="control__label">питьевая вода</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="checkbox" name="milk">
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">молоко</span>
+                  <input class="visually-hidden" type="checkbox" name="milk">
+                  <span class="control__mark"></span>
+                  <span class="control__label">молоко</span>
                 </label>
               </li>
               <li class="blank__item">
                 <label class="control">
-                  <input class="blank__control visually-hidden" type="checkbox" name="vitamins">
-                  <span class="blank__mark"></span>
-                  <span class="blank__label">витамины</span>
+                  <input class="visually-hidden" type="checkbox" name="vitamins">
+                  <span class="control__mark"></span>
+                  <span class="control__label">витамины</span>
                 </label>
               </li>
             </ul>
