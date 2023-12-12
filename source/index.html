@@ -126,14 +126,16 @@
             </div>
 
             <div class="example__slider slider">
-              <picture>
-                <source type="image/png" media="(min-width: 768px)" srcset="images/index/slider/cat-before-tablet-desktop@1x.png 1x, images/index/slider/cat-before-tablet-desktop@2x.png 2x" width="560" height="512">
-                <img class="slider__befor" src="images/index/slider/cat-before-mobile@1x.png" srcset="images/index/slider/cat-before-mobile@2x.png 2x" alt="Толстый кот перед приемом продукции Cat Energy" width="280" height="256">
-              </picture>
-              <picture>
-                <source type="image/png" media="(min-width: 768px)" srcset="images/index/slider/cat-after-tablet-desktop@1x.png 1x, images/index/slider/cat-after-tablet-desktop@2x.png 2x" width="560" height="512">
-                <img class="slider__after" src="images/index/slider/cat-after-mobile@1x.png" srcset="images/index/slider/cat-after-mobile@2x.png 2x" alt="Худой кот после приема продукции Cat Energy" width="280" height="256">
-              </picture>
+              <ul class="slider__images">
+                <li class="slider__image-before"></li>
+                <li class="slider__image-after"></li>
+              </ul>
+              <div class="slider__main-slider">
+                <div class="slider__drag-line">
+                  <span class="slider__marker"></span>
+                  <input class="slider__input" type="range" name="slider-cat" min="0" max="100" aria-label="Разные состония котов">
+                </div>
+              </div>
             </div>
           </div>
         </section>
