@@ -8,8 +8,9 @@
 // .example__content {
 // }
 
-// .example__title {
-// }
+.example__title {
+  @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
+}
 
 // .example__text {
 // }
