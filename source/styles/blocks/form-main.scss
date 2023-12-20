@@ -1,0 +1,11 @@
+.form-main {
+  background-color: $bg-primary;
+}
+
+.form-main__title {
+  @include font-setting($secondary-font, 36px, 400, 36px, $f-secondary);
+}
+
+.form-main__text {
+  color: $f-secondary;
+}

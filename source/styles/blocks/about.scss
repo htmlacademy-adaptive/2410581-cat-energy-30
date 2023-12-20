@@ -1,0 +1,32 @@
+// .about {
+// }
+
+// .about__container {
+// }
+
+.about__title {
+  @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
+}
+
+.about__list {
+  @include list-resseting;
+}
+
+// .about__item {
+
+//   &--eco {
+
+//   }
+//   &--fast {
+
+//   }
+//   &--food {
+
+//   }
+//   &--time {
+
+//   }
+// }
+
+// .about__description {
+// }

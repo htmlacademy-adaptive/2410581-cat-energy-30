@@ -1,0 +1,19 @@
+.logos {
+  @include list-resseting;
+}
+
+// .logos__item {
+// }
+
+.logos__link {
+  @include font-setting($primary-font, 16px, 400, 20px, $f-main);
+  // &--cat-energy {
+  // }
+}
+
+.logos__sub-list {
+  @include list-resseting;
+}
+
+// .logos__sub-item {
+// }
