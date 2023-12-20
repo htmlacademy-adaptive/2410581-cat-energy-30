@@ -1,6 +1,6 @@
 .input-blank {
   @include font-setting($secondary-font, 16px, 400, 18px, $f-main);
   text-transform: uppercase;
-  &--long {
-  }
+  // &--long {
+  // }
 }

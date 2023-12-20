@@ -35,7 +35,6 @@
 }
 
 .example__descrtiption {
-
   &--expense-prise {
     @include font-setting($secondary-font, 14px, 400, 14px, $f-secondary);
   }
