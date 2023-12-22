@@ -1,0 +1,1 @@
+var e=document.querySelector(".slider__input"),t=document.querySelector(".slider__drag-line"),l=document.querySelector(".slider__image-before"),r=document.querySelector(".slider__image-after");e.oninput=()=>{t.style.left=`${e.value}%`,l.style.clipPath=`inset(0 ${100-e.value}% 0 0)`,r.style.clipPath=`inset(0 0 0 ${e.value}%)`};
