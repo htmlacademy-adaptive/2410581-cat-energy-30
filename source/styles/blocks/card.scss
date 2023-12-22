@@ -1,0 +1,51 @@
+// .card {
+// }
+
+// .card__link {
+// }
+
+// .card__image {
+
+//   &--more {
+//   }
+// }
+
+.card__title {
+  @include font-setting($secondary-font, 16px, 400, 20px, $f-minor);
+  text-transform: uppercase;
+
+  &--more {
+    color: $f-trifle;
+  }
+}
+
+// .card__specifications {
+// }
+
+// .card__item {
+// }
+
+.card__property {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__value {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__button {
+  &--secondary {
+    color: $f-main;
+    background-color: $bg-secondary;
+  }
+}
+
+// .card__valuee {
+// }
+
+.card__text {
+  font-size: 12px;
+  line-height: 16px;
+}

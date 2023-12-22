@@ -1,0 +1,22 @@
+// .invitation {
+// }
+
+.invitation__container {
+  background-color: $bg-primary;
+}
+
+// .invitation__content {
+// }
+
+.invitation__title {
+  @include font-setting($secondary-font, 16px, 400, 20px, $f-trifle);
+  text-transform: uppercase;
+}
+
+.invitation__address {
+  line-height: 20px;
+  font-style: normal;
+}
+
+// .invitation__map {
+// }

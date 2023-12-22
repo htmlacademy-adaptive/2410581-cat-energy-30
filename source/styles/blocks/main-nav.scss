@@ -1,0 +1,23 @@
+// .main-nav {
+// }
+
+// .main-nav__toggle {
+// }
+
+// .toggle-burger {
+// }
+
+.main-nav__list {
+  @include list-resseting;
+}
+
+.main-nav__item {
+  text-align: center;
+  // &--current {
+  // }
+}
+
+.main-nav__link {
+  @include font-setting($secondary-font, 20px, 400, 20px, $f-secondary);
+  text-transform: uppercase;
+}

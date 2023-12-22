@@ -1,0 +1,35 @@
+// .optionally {
+// }
+
+.optionally__headline {
+  @include font-setting($secondary-font, 24px, 400, 24px, $f-main);
+}
+
+.optionally__list {
+  @include list-resseting;
+}
+
+// .optionally__item {
+// }
+
+.optionally__title {
+  @include font-setting($secondary-font, 16px, 400, 16px, $f-minor);
+  text-transform: uppercase;
+}
+
+// .optionally__specifications {
+// }
+
+.optionally__quantity {
+  line-height: 14px;
+}
+
+.optionally__price {
+  line-height: 14px;
+}
+
+// .optionally__button {
+// }
+
+// .optionally__gift {
+// }

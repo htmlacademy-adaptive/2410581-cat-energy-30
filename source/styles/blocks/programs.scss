@@ -1,0 +1,32 @@
+// .programs {
+// }
+
+// .programs__container {
+// }
+
+.programs__list {
+  @include list-resseting;
+}
+
+.programs__item {
+  background-color: $bg-secondary;
+  // &--weight-loss {
+
+  // }
+  // &--weight-gain {
+
+  // }
+}
+
+.programs__title {
+  @include font-setting($secondary-font, 24px, 400, 37px, $f-secondary);
+  text-transform: uppercase;
+}
+
+// .programs__text {
+// }
+
+.programs__link {
+  @include font-setting($secondary-font, 16px, 400, 16px, $f-secondary);
+  text-transform: uppercase;
+}

@@ -1,0 +1,42 @@
+// .example {
+// }
+
+.example__container {
+  background-color: #eaeaea;
+}
+
+// .example__content {
+// }
+
+.example__title {
+  @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
+}
+
+// .example__text {
+// }
+
+// .example__list {
+// }
+
+// .example__item {
+
+//   &--expense {
+
+//   }
+// }
+
+.example__number {
+  @include font-setting($secondary-font, 24px, 400, 24px, $f-secondary);
+  text-transform: uppercase;
+
+  &--expense-text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__descrtiption {
+  &--expense-prise {
+    @include font-setting($secondary-font, 14px, 400, 14px, $f-secondary);
+  }
+}

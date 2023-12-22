@@ -1,0 +1,7 @@
+.main-content {
+  background-color: $bg-primary;
+}
+
+.main-content__title {
+  @include font-setting($secondary-font, 36px, 400, 36px, $f-secondary);
+}

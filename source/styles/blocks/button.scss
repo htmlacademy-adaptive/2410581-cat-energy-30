@@ -1,0 +1,8 @@
+.button {
+  @include font-setting($secondary-font, 16px, 400, 20px, $f-highlighted);
+
+  padding: 10px 44px;
+  text-transform: uppercase;
+  background-color: $b-primary;
+  border: none;
+}
