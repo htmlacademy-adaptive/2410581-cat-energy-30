@@ -9,8 +9,19 @@
 
 .logos__link {
   @include font-setting($primary-font, 16px, 400, 20px, $f-main);
-  // &--cat-energy {
-  // }
+  transition: all 0.3s ease 0s;
+
+  &--cat-energy {
+    &:hover {
+      filter: invert(26%) sepia(0%) saturate(1381%) hue-rotate(194deg) brightness(94%) contrast(101%);
+      transition: all 0.3s ease 0s;
+    }
+
+    &:active {
+      filter: invert(45%) sepia(8%) saturate(7%) hue-rotate(340deg) brightness(87%) contrast(82%);
+      transition: all 0.3s ease 0s;
+    }
+  }
 }
 
 .logos__sub-list {

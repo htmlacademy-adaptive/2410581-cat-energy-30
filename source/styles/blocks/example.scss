@@ -31,12 +31,12 @@
 
   &--expense-text {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 20px;
   }
 }
 
 .example__descrtiption {
   &--expense-prise {
-    @include font-setting($secondary-font, 14px, 400, 14px, $f-secondary);
+    @include font-setting($secondary-font, 14px, 400, 20px, $f-secondary);
   }
 }

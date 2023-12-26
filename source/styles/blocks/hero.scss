@@ -1,9 +1,10 @@
-// .hero {
-// }
-
-.hero__container {
-  background: rgba(104, 183, 56, 0.85);
+.hero {
+  position: relative;
+  z-index: 3;
 }
+
+// .hero__container {
+// }
 
 .hero__title {
   @include font-setting($secondary-font, 36px, 400, 36px, $f-highlighted);
@@ -11,12 +12,11 @@
 
 .hero__slogan {
   @include font-setting($secondary-font, 14px, 400, 14px, $f-highlighted);
+  text-transform: uppercase;
 }
 
 // .hero__product-image {
 // }
 
-.hero__button {
-  @include font-setting($secondary-font, 16px, 400, 20px, $f-highlighted);
-  text-transform: uppercase;
-}
+// .hero__button {
+// }
