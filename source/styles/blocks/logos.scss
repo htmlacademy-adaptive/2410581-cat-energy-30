@@ -11,14 +11,50 @@
   @include font-setting($primary-font, 16px, 400, 20px, $f-main);
   transition: all 0.3s ease 0s;
 
+  &:hover {
+    color: #68b738;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:active {
+    color: rgba(104, 183, 56, 0.3);
+    transition: all 0.3s ease 0s;
+  }
+
   &--cat-energy {
     &:hover {
-      filter: invert(26%) sepia(0%) saturate(1381%) hue-rotate(194deg) brightness(94%) contrast(101%);
+      fill: #3e3e3e;
       transition: all 0.3s ease 0s;
     }
 
     &:active {
-      filter: invert(45%) sepia(8%) saturate(7%) hue-rotate(340deg) brightness(87%) contrast(82%);
+      fill: #6b6b6b;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &--academy-text {
+    &:hover {
+      color: #444444;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &--academy-logo {
+    color: #666666;
+
+    &:hover {
+      color: #68b738;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:active {
+      color: rgba(104, 183, 56, 0.3);
       transition: all 0.3s ease 0s;
     }
   }

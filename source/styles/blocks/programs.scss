@@ -75,7 +75,7 @@
 .programs__link {
   @include font-setting($secondary-font, 16px, 400, 16px, $f-secondary);
   position: relative;
-  padding-right: 39px;
+  padding-right: 50px;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
 
@@ -83,14 +83,17 @@
     position: absolute;
     top: 7px;
     right: 0;
-    width: 24px;
-    height: 12px;
+    width: 32px;
+    height: 10px;
     content: "";
     background-image: url("../../images/icons/stack.svg#arrow");
+    background-position: -8px 0;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease 0s;
   }
 
-  &:hover {
-    opacity: 0.6;
+  &:hover::before {
+    background-position: -3px 0;
     transition: all 0.3s ease 0s;
   }
 
