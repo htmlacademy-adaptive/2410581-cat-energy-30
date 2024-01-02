@@ -1,11 +1,20 @@
 .form-main {
   background-color: $bg-primary;
+  padding-top: 27px;
 }
 
 .form-main__title {
   @include font-setting($secondary-font, 36px, 400, 36px, $f-secondary);
+  margin-top: 0;
+  margin-bottom: 37px;
+  padding-left: 20px;
 }
 
 .form-main__text {
+  font-family: $secondary-font;
+  margin-top: 0;
+  margin-bottom: 19px;
+  padding-left: 20px;
   color: $f-secondary;
+  text-transform: uppercase;
 }

@@ -1,32 +1,70 @@
 // .about {
 // }
 
-// .about__container {
-// }
+.about__container {
+  padding: 0 20px 53px;
+}
 
 .about__title {
   @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
+  margin-top: 0;
+  margin-bottom: 42px;
 }
 
 .about__list {
   @include list-resseting;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 
-// .about__item {
+.about__item {
+  position: relative;
 
-//   &--eco {
+  &--eco {
+    &::before {
+      background: url("../../images/icons/stack.svg#leaf"), linear-gradient(#68b738 0%, #68b738 100%);
+      background-size: 30px 32px, 100%;
+    }
+  }
 
-//   }
-//   &--fast {
+  &--fast {
+    &::before {
+      background: url("../../images/icons/stack.svg#powder"), linear-gradient(#68b738 0%, #68b738 100%);
+      background-size: 26px 29px, 100%;
+    }
+  }
 
-//   }
-//   &--food {
+  &--food {
+    &::before {
+      background: url("../../images/icons/stack.svg#eat"), linear-gradient(#68b738 0%, #68b738 100%);
+      background-size: 25px 30px, 100%;
+    }
+  }
 
-//   }
-//   &--time {
+  &--time {
+    &::before {
+      background: url("../../images/icons/stack.svg#time"), linear-gradient(#68b738 0%, #68b738 100%);
+      background-size: 27px 31px, 100%;
+    }
+  }
 
-//   }
-// }
+  &--eco::before,
+  &--food::before,
+  &--fast::before,
+  &--time::before {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 
-// .about__description {
-// }
+.about__description {
+  margin: 0;
+  padding: 2px 0 4px;
+  padding-left: 80px;
+}

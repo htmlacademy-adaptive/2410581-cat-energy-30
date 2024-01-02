@@ -1,7 +1,7 @@
 @mixin list-resseting {
   margin: 0;
   padding: 0;
-  text-decoration: none;
+  list-style-type: none;
 }
 
 @mixin font-setting($f-family: $primary-font, $f-size: 14px, $f-weight: 400, $f-height: 18px, $f-color: #444444) {

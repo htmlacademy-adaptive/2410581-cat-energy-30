@@ -3,20 +3,34 @@
 
 .invitation__container {
   background-color: $bg-primary;
+  padding-top: 26px;
+
+  &--secondary {
+    background-color: #f2f2f2;
+  }
 }
 
-// .invitation__content {
-// }
+.invitation__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+  padding: 0 20px;
+}
 
 .invitation__title {
   @include font-setting($secondary-font, 16px, 400, 20px, $f-trifle);
+  margin: 0;
+  justify-self: end;
   text-transform: uppercase;
 }
 
 .invitation__address {
+  margin-bottom: 26px;
   line-height: 20px;
   font-style: normal;
 }
 
-// .invitation__map {
-// }
+.invitation__map {
+  display: block;
+  margin: 0 auto;
+}

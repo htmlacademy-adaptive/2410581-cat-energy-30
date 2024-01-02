@@ -1,22 +1,39 @@
-// .blank {
-// }
+.blank {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
 
 .blank__description {
   @include font-setting($secondary-font, 16px, 400, 18px, $f-main);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 13px;
   text-transform: uppercase;
 }
 
 // .blank__input {
 // }
 
-// .blank__list {
-// }
+.blank__list {
+  @include list-resseting;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
 // .blank__item {
+
 // }
 
 .blank__title {
   @include font-setting($secondary-font, 24px, 400, 26px, $f-secondary);
+  float: left;
+  margin-bottom: 35px;
 }
 
 // .blank__comment {
