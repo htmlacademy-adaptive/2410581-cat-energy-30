@@ -1,15 +1,21 @@
 // .about {
 // }
 
-// .about__container {
-// }
+.about__container {
+  padding: 0 20px 53px;
+}
 
 .about__title {
   @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
+  margin-top: 0;
+  margin-bottom: 42px;
 }
 
 .about__list {
   @include list-resseting;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 
 .about__item {
@@ -48,7 +54,7 @@
   &--fast::before,
   &--time::before {
     position: absolute;
-    left: 20px;
+    left: 0;
     width: 60px;
     height: 60px;
     content: "";
@@ -58,5 +64,7 @@
 }
 
 .about__description {
-  padding-left: 100px;
+  margin: 0;
+  padding: 2px 0 4px;
+  padding-left: 80px;
 }

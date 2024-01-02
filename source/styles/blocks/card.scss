@@ -1,10 +1,78 @@
-// .card {
-// }
+.card {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 20px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 17px 0;
 
-// .card__link {
-// }
+  &--more {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+  }
 
-// .card__image {
+  &:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #ebebeb;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #ebebeb;
+  }
+}
+
+.card__link {
+  &--title {
+    display: block;
+    width: 76px;
+    margin-bottom: 14px;
+  }
+
+  &--more {
+    margin-bottom: 8px;
+  }
+}
+
+.card__content {
+  width: 100%;
+}
+
+.card__image {
+  &--more {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 23px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      width: 30px;
+      height: 2px;
+      background-color: #d3d3d3;
+    }
+
+    &::after {
+      rotate: 90deg;
+    }
+  }
+}
 
 //   &--more {
 //   }
@@ -12,6 +80,7 @@
 
 .card__title {
   @include font-setting($secondary-font, 16px, 400, 20px, $f-minor);
+  margin: 0;
   text-transform: uppercase;
 
   &--more {
@@ -19,11 +88,14 @@
   }
 }
 
-// .card__specifications {
-// }
+.card__specifications {
+  width: 100%;
+}
 
-// .card__item {
-// }
+.card__item {
+  display: flex;
+  justify-content: space-between;
+}
 
 .card__property {
   font-size: 12px;
@@ -36,9 +108,13 @@
 }
 
 .card__button {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+
   &--secondary {
     color: $f-main;
     background-color: $bg-secondary;
+    align-self: stretch;
   }
 }
 
@@ -46,6 +122,8 @@
 // }
 
 .card__text {
+  margin-top: 0;
+  margin-bottom: 21px;
   font-size: 12px;
   line-height: 16px;
 }

@@ -2,6 +2,7 @@
 // }
 
 .example__container {
+  padding: 25px 20px 40px;
   background-color: #eaeaea;
 }
 
@@ -10,23 +11,45 @@
 
 .example__title {
   @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
-// .example__text {
-// }
+.example__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-// .example__list {
-// }
+.example__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 34px;
+}
 
-// .example__item {
+.example__item {
+  width: 124px;
+  padding: 15px 20px 0;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 
-//   &--expense {
+  &--expense {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    align-items: start;
+    grid-column: 1 / 3;
+    border: none;
+  }
 
-//   }
-// }
+  &--first {
+    justify-self: end;
+  }
+}
 
 .example__number {
   @include font-setting($secondary-font, 24px, 400, 24px, $f-secondary);
+  text-align: center;
   text-transform: uppercase;
 
   &--expense-text {
@@ -36,7 +59,18 @@
 }
 
 .example__descrtiption {
+  position: relative;
+  top: 14px;
+  margin: 0;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  background-color: #eaeaea;
+
   &--expense-prise {
     @include font-setting($secondary-font, 14px, 400, 20px, $f-secondary);
+    margin-top: -14px;
   }
 }

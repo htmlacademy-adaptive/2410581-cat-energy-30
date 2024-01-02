@@ -1,11 +1,31 @@
 .logos {
   @include list-resseting;
-
+  padding: 40px 20px;
   background-color: #f2f2f2;
 }
 
-// .logos__item {
-// }
+.logos__item {
+  position: relative;
+  text-align: center;
+
+  &--academy {
+    align-self: stretch;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  &:not(:last-of-type)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
 
 .logos__link {
   @include font-setting($primary-font, 16px, 400, 20px, $f-main);
@@ -62,6 +82,14 @@
 
 .logos__sub-list {
   @include list-resseting;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  &--academy {
+    justify-content: space-between;
+  }
 }
 
 // .logos__sub-item {
