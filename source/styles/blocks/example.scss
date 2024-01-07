@@ -1,34 +1,91 @@
-// .example {
-// }
+.example {
+  position: relative;
+}
 
 .example__container {
   padding: 25px 20px 40px;
   background-color: #eaeaea;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 45px;
+    background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    border-top: none;
+  }
 }
 
-// .example__content {
-// }
+.example__content {
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 110px 61px;
+    background-color: #eaeaea;
+  }
+}
 
 .example__title {
   @include font-setting($secondary-font, 36px, 400, 40px, $f-secondary);
   margin-top: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+    margin-bottom: 76px;
+  }
 }
 
 .example__text {
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
 }
 
 .example__list {
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px 34px;
+  gap: 34px 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 162px 162px 1fr;
+    gap: 43px;
+    margin-bottom: 254px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    grid-template-columns: 162px 162px;
+    gap: 50px 42px;
+  }
 }
 
 .example__item {
   width: 124px;
-  padding: 15px 20px 0;
+  padding: 6px 20px 0;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 
@@ -45,22 +102,73 @@
   &--first {
     justify-self: end;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding-bottom: 13px;
+
+    &--expense {
+      width: auto;
+      flex-direction: column;
+      align-items: end;
+      gap: 9px;
+      justify-self: end;
+      grid-column: 3 / 4;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--expense {
+      width: 436px;
+      flex-direction: row;
+      gap: 63px;
+      justify-content: start;
+      grid-column: 1 / -1;
+      justify-self: stretch;
+    }
+
+    &--first {
+      justify-self: start;
+    }
+  }
 }
 
 .example__number {
   @include font-setting($secondary-font, 24px, 400, 24px, $f-secondary);
+  position: relative;
+  top: 7px;
   text-align: center;
   text-transform: uppercase;
 
   &--expense-text {
+    top: 0;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+
+    &--expense-text {
+      margin-top: 11px;
+      font-size: 20px;
+      line-height: 20px;
+      justify-self: stretch;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--expense-text {
+      align-self: flex-start;
+      width: 174px;
+    }
   }
 }
 
 .example__descrtiption {
   position: relative;
-  top: 14px;
+  top: 16px;
   margin: 0;
   padding-right: 6px;
   padding-left: 6px;
@@ -71,6 +179,34 @@
 
   &--expense-prise {
     @include font-setting($secondary-font, 14px, 400, 20px, $f-secondary);
-    margin-top: -14px;
+    top: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 145px;
+    top: 19px;
+    left: 50%;
+    translate: -50% 0;
+    padding: 0;
+    padding-right: 9px;
+    padding-left: 9px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+
+    &--expense-prise {
+      min-width: auto;
+      font-size: 20px;
+      line-height: 20px;
+      top: 0;
+      left: 0;
+      translate: 0 0;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
   }
 }

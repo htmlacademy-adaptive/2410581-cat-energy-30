@@ -1,9 +1,27 @@
 .main-content {
   background-color: $bg-primary;
+
+  @media (min-width: $tablet-width) {
+    &--catalog {
+      padding: 46px 30px 75px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--catalog {
+      padding: 74px 110px 87px;
+    }
+  }
 }
 
 .main-content__title {
   @include font-setting($secondary-font, 36px, 400, 36px, $f-secondary);
   margin: 0;
-  padding: 27px 20px 41px;
+  padding: 27px 20px 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 84px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

@@ -2,6 +2,17 @@
   @include list-resseting;
   padding: 40px 20px;
   background-color: #f2f2f2;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 56px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px 110px;
+  }
 }
 
 .logos__item {
@@ -25,11 +36,31 @@
     height: 1px;
     background-color: #d9d9d9;
   }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .logos__link {
   @include font-setting($primary-font, 16px, 400, 20px, $f-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease 0s;
+
+  &--vk,
+  &--youtube,
+  &--telegram {
+    width: 28px;
+    height: 22px;
+  }
 
   &:hover {
     color: #68b738;
@@ -42,6 +73,8 @@
   }
 
   &--cat-energy {
+    justify-content: center;
+
     &:hover {
       fill: #3e3e3e;
       transition: all 0.3s ease 0s;

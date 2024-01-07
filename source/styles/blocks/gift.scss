@@ -6,10 +6,31 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    height: 200px;
+    padding: 71px 125px 69px;
+    display: grid;
+    grid-template-columns: 1fr 161px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/backgrounds/gift-case-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    height: 100%;
+    padding: 0 42px 43px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/backgrounds/gift-case-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .gift__text {
-  position: relative;
   margin: 0;
   padding-top: 128px;
   font-size: 16px;
@@ -26,5 +47,37 @@
     left: 50%;
     background-image: url("../../images/icons/stack.svg#gift-icon");
     translate: -50% 0;
+  }
+
+  @media (max-width: 767px) {
+    position: relative;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    width: 161px;
+    text-align: left;
+    padding-top: 0;
+
+    &::before {
+      width: 80px;
+      height: 83px;
+      top: 50%;
+      left: 77px;
+      translate: 50% -50%;
+      grid-column: -4 / -3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 185px;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      translate: -50% 0;
+    }
   }
 }

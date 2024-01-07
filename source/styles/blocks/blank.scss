@@ -1,10 +1,14 @@
 .blank {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   padding: 0;
   margin: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 17px;
+  }
 }
 
 .blank__description {
@@ -14,6 +18,11 @@
   align-items: center;
   gap: 13px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 // .blank__input {
@@ -23,17 +32,57 @@
   @include list-resseting;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 13px;
+
+  // &--extra {
+  // }
+
+  @media (min-width: $tablet-width) {
+    &--extra {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 284px);
+      gap: 32px 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--extra {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 80px;
+    }
+  }
 }
 
 // .blank__item {
-
 // }
 
 .blank__title {
   @include font-setting($secondary-font, 24px, 400, 26px, $f-secondary);
+  position: relative;
+  width: fit-content;
+  padding: 0;
   float: left;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--extra {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
+    grid-column: 1 / -1;
+
+    &--extra {
+      margin-bottom: 41px;
+    }
+  }
 }
 
 // .blank__comment {
