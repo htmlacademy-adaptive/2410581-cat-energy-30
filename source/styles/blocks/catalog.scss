@@ -3,6 +3,18 @@
 
 .catalog__list {
   @include list-resseting;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 65px 60px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    gap: 63px 79px;
+  }
 }
 
 // .catalog__item {
