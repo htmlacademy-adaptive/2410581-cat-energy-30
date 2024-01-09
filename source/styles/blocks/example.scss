@@ -3,6 +3,7 @@
 }
 
 .example__container {
+  display: grid;
   padding: 25px 20px 40px;
   background-color: #eaeaea;
 
@@ -14,6 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
     padding: 0;
     border-top: none;
   }
@@ -25,6 +27,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
     padding: 70px 110px 61px;
     background-color: #eaeaea;
   }
@@ -43,6 +46,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
     padding-left: 110px;
     margin-bottom: 76px;
   }
