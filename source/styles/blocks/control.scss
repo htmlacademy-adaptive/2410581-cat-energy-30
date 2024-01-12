@@ -7,6 +7,11 @@
   &:hover .control__mark {
     border-color: #bababa;
   }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+  }
 }
 
 .control__input {
@@ -35,6 +40,18 @@
     height: 14px;
     background-image: url("../../images/icons/stack.svg#checkbox");
   }
+
+  @media (min-width: $tablet-width) {
+    &[type="radio"]:checked + .control__mark::before {
+      width: 18px;
+      height: 18px;
+    }
+
+    &[type="checkbox"]:checked + .control__mark::before {
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
 
 .control__mark {
@@ -49,11 +66,22 @@
   &--extra {
     border-radius: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .control__label {
   @include font-setting($secondary-font, 16px, 400, 18px, $f-main);
-  padding: 6px 0 6px;
+  padding: 6px 0;
   grid-column: 2 / 3;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0;
+    font-size: 20px;
+    line-height: normal;
+  }
 }

@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b741650d-aeca-472d-a761-ce8550b60bb1&lang=ru_RU" defer></script>
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -106,29 +107,29 @@
           </fieldset>
 
           <fieldset class="form__blank form__blank--contacts blank">
-            <legend class="blank__title">Контактные данные<br> (владельца кота)</legend>
+            <legend class="blank__title">Контактные данные (владельца кота)</legend>
 
             <label class="blank__description">
               E-mail:*
-              <input class="blank__input input-blank" type="email" name="email" required>
+              <input class="blank__input input-blank" type="email" name="email" placeholder="KUKLACHEV@GMAIL.COM" required>
             </label>
 
             <label class="blank__description">
               Телефон:*
-              <input class="blank__input input-blank" type="tel" id="telephone" name="telephone" required>
+              <input class="blank__input input-blank" type="tel" id="telephone" name="telephone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
 
           <div class="form__blank form__blank--comments blank">
             <h2 class="blank__title">Комментарий</h2>
             <label class="visually-hidden" for="comment">Напишите о своем коте</label>
-            <textarea class="blank__comment input-blank input-blank--long" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+            <textarea class="blank__comment input-blank input-blank--long" name="comment" id="comment" cols="30" rows="5" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </div>
 
           <fieldset class="form__blank form__blank--extra blank">
-            <legend class="blank__title">Дополнительно</legend>
+            <legend class="blank__title blank__title--extra">Дополнительно</legend>
 
-            <ul class="blank__list">
+            <ul class="blank__list blank__list--extra">
               <li class="blank__item">
                 <label class="control">
                   <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
@@ -172,13 +173,10 @@
           <div class="invitation__container invitation__container--secondary">
             <div class="invitation__content">
               <h2 class="invitation__title">приглашаем<br> к&nbsp;сотрудничеству<br> дилеров!</h2>
-              <address class="invitation__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</address>
+              <address class="invitation__address">ул. Большая<br> Конюшенная, д. 19/8<br> <span>Санкт-Петербург</span></address>
             </div>
-            <picture>
-              <source type="image/png" media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" width="1440" height="400">
-              <source type="image/png" media="(min-width: 768px)" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x" width="768" height="400">
-              <img class="invitation__map" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" alt="Локация магазина cat energy." width="320" height="362">
-            </picture>
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <div class="invitation__map-container" id="map"></div>
           </div>
         </section>
 
@@ -224,6 +222,5 @@
       </footer>
     </div>
 
-    <script src="scripts/index.js"></script>
   </body>
 </html>

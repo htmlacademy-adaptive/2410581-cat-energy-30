@@ -2,21 +2,53 @@
   max-width: 500px;
   margin: 0 auto;
   padding: 25px 20px 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 70px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 0 81px;
+  }
 }
 
 .optionally__headline {
   @include font-setting($secondary-font, 24px, 400, 24px, $f-main);
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .optionally__list {
   @include list-resseting;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .optionally__item {
   position: relative;
-  padding: 13px 0 19px;
+  padding: 14px 0 18px;
 
   &:first-child::before {
     content: "";
@@ -36,6 +68,35 @@
     height: 1px;
     background-color: #cdcdcd;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #cdcdcd;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 17px;
+    border-bottom: 1px solid #cdcdcd;
+    grid-template-columns: 1fr 81px 1fr 40px 1fr;
+    border-left: none;
+    border-right: none;
+    align-items: center;
+
+    &:first-of-type {
+      border-top: 1px solid #cdcdcd;
+    }
+  }
 }
 
 .optionally__title {
@@ -43,6 +104,15 @@
   margin-top: 0;
   margin-bottom: 13px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .optionally__specifications {
@@ -50,18 +120,41 @@
   justify-content: space-between;
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    margin: 0;
+    grid-column: 3 / 4;
+    flex-shrink: 0;
+    justify-content: space-between;
+  }
 }
 
-.optionally__quantity {
-  line-height: 14px;
-}
-
+.optionally__quantity,
 .optionally__price {
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .optionally__button {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 5 / 6;
+  }
 }
 
 // .optionally__gift {
