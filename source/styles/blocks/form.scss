@@ -25,6 +25,10 @@
 
   &--contacts {
     padding: 26px 0 12px;
+
+    & .blank__title {
+      display: block;
+    }
   }
 
   &--comments {
