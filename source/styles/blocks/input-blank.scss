@@ -31,9 +31,19 @@
     border: 2px solid #444444;
   }
 
+  &--long:focus,
+  &--long:active {
+    padding: 13px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 11px 20px;
     font-size: 20px;
     line-height: normal;
+
+    &:focus,
+    &:active {
+      padding: 10px 19px;
+    }
   }
 }
