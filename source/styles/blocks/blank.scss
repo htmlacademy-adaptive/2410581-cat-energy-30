@@ -13,11 +13,58 @@
 
 .blank__description {
   @include font-setting($secondary-font, 16px, 400, 18px, $f-main);
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 13px;
   text-transform: uppercase;
+
+  // span {
+  //   max-width: 67px;
+  // }
+
+  &:has(.blank__input[type="email"])::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 12px;
+    mask-image: url("../../images/icons/email-icon.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #222222;
+    translate: 0 -50%;
+  }
+
+  &:has(.blank__input[type="tel"])::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 12px;
+    mask-image: url("../../images/icons/phone-icon.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #222222;
+    translate: 0 -50%;
+  }
+
+  &:has(.blank__input.blank__input--error)::before {
+    background-color: #ff8282;
+  }
+
+  &:has(.blank__input.blank__input--error:hover)::before,
+  &:has(.blank__input.blank__input--error:focus)::before,
+  &:has(.blank__input.blank__input--error:active)::before {
+    background-color: #b63841;
+  }
+
+  &:has(.blank__input:focus)::before {
+    background-color: #68b738;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -25,8 +72,18 @@
   }
 }
 
-// .blank__input {
-// }
+.blank__input {
+  &.blank__input--error {
+    padding: 13px 14px 12px;
+    outline: none;
+    border: 2px solid #ff8282;
+
+    &:hover,
+    &:focus {
+      border-color: #b63841;
+    }
+  }
+}
 
 .blank__list {
   @include list-resseting;
@@ -67,6 +124,7 @@
   z-index: 2;
 
   & span {
+    display: block;
     position: relative;
     z-index: 2;
     background-color: #ffffff;
@@ -97,6 +155,10 @@
     & span {
       box-shadow: -40px 0 0 #ffffff, 40px 0 0 #ffffff;
     }
+
+    & span br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -106,12 +168,12 @@
     &--extra {
       margin-bottom: 41px;
     }
-
-    & span br {
-      display: none;
-    }
   }
 }
 
 // .blank__comment {
 // }
+
+.blank__label {
+  grid-column: 1 / 2;
+}

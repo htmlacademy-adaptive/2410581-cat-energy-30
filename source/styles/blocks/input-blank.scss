@@ -10,6 +10,27 @@
     padding: 14px;
   }
 
+  &[type="email"],
+  &[type="tel"] {
+    padding-right: 35px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      padding-right: 35px;
+    }
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    padding: 13px 14px 12px;
+    outline: none;
+    border: 2px solid #444444;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 11px 20px;
     font-size: 20px;

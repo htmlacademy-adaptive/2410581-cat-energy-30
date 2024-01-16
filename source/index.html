@@ -129,7 +129,29 @@
               </dl>
             </div>
 
-            <div class="example__slider slider">
+            <div class="slider">
+              <div class="slider__container">
+                  <ul class="slider__images">
+                      <li class="slider__image slider__image--before">
+                        <picture>
+                          <source type="image/png" media="(min-width: 768px)" srcset="images/slider/cat-before-tablet-desktop@1x.png 1x, images/slider/cat-before-tablet-desktop@2x.png 2x" width="560" height="512">
+                          <img class="slider__before" src="images/slider/cat-before-mobile@1x.png" srcset="images/slider/cat-before-mobile@2x.png 2x" alt="Кот до приема cat Energy" width="280" height="256">
+                        </picture>
+                      </li>
+                      <li class="slider__image slider__image--after">
+                        <picture>
+                          <source type="image/png" media="(min-width: 768px)" srcset="images/slider/cat-after-tablet-desktop@1x.png 1x, images/slider/cat-after-tablet-desktop@2x.png 2x" width="560" height="512">
+                          <img class="slider__after" src="images/slider/cat-after-mobile@1x.png" srcset="images/slider/cat-after-mobile@2x.png 2x" alt="Кот после приема cat Energy" width="280" height="256">
+                        </picture>
+                      </li>
+                  </ul>
+
+                  <div class="slider__input">
+                      <div class="slider__button"></div>
+                  </div>
+              </div>
+            </div>
+            <!-- <div class="example__slider slider">
 
               <div class="slider__container">
                 <div class="slider__images">
@@ -151,7 +173,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </section>
