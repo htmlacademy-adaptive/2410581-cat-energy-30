@@ -193,6 +193,16 @@
     color: $f-main;
     background-color: $bg-secondary;
     align-self: stretch;
+
+    &:hover,
+    &:active {
+      color: #444444;
+      background-color: #ebebeb;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
   }
 }
 
