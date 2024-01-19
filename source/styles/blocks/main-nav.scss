@@ -20,9 +20,18 @@
   transition: all 0.5s ease 0s;
 
   &--closed {
-    opacity: 0;
+    display: none;
     pointer-events: none;
     transition: all 0.5s ease 0s;
+  }
+
+  &--no-js {
+    width: 100%;
+    position: relative;
+    top: 0;
+    pointer-events: all;
+    transition: none;
+    display: block;
   }
 
   @media (min-width: $tablet-width) {
@@ -66,6 +75,14 @@
     width: 100%;
     height: 1px;
     background-color: #e6e6e6;
+  }
+
+  &--no-js {
+    &::before,
+    &:first-of-type::after {
+      left: -20px;
+      width: 100vw;
+    }
   }
 
   @media (min-width: $tablet-width) {

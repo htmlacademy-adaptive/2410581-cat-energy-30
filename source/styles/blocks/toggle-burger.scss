@@ -5,6 +5,10 @@
   border: none;
   background-color: transparent;
 
+  &--no-js {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
