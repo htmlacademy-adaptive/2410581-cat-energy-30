@@ -27,7 +27,16 @@
       display: block;
       width: 320px;
       height: 302px;
-      background: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/backgrounds/hero-cat-mobile@2x.jpg");
+      background:
+        linear-gradient(
+          rgba(104, 183, 56, 0.85) 0%,
+          rgba(104, 183, 56, 0.85) 100%),
+        image-set(
+          url("../../images/backgrounds/hero-cat-mobile@1x.webp") type("image/webp") 1x,
+          url("../../images/backgrounds/hero-cat-mobile@2x.webp") type("image/webp") 2x,
+          url("../../images/backgrounds/hero-cat-mobile@1x.jpg") type("image/jpeg") 1x,
+          url("../../images/backgrounds/hero-cat-mobile@2x.jpg") type("image/jpeg") 2x,
+        );
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
