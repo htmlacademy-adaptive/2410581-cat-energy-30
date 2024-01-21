@@ -41,6 +41,10 @@
     background-image: url("../../images/icons/stack.svg#checkbox");
   }
 
+  &:focus-visible + .control__mark {
+    border: 2px solid #bababa;
+  }
+
   @media (min-width: $tablet-width) {
     &[type="radio"]:checked + .control__mark::before {
       width: 18px;

@@ -195,6 +195,7 @@
     align-self: stretch;
 
     &:hover,
+    &:focus,
     &:active {
       color: #444444;
       background-color: #ebebeb;

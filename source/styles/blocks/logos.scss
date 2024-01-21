@@ -64,7 +64,8 @@
     height: 22px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #68b738;
     transition: all 0.3s ease 0s;
   }
@@ -77,7 +78,8 @@
   &--cat-energy {
     justify-content: center;
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: #3e3e3e;
       transition: all 0.3s ease 0s;
     }
@@ -89,7 +91,8 @@
   }
 
   &--academy-text {
-    &:hover {
+    &:hover,
+    &:focus {
       color: #444444;
       transition: all 0.3s ease 0s;
     }
@@ -103,7 +106,8 @@
   &--academy-logo {
     color: #666666;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #68b738;
       transition: all 0.3s ease 0s;
     }
