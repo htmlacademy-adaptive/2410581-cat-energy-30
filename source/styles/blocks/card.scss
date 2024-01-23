@@ -255,6 +255,7 @@
 .card__button {
   grid-column: 1 / -1;
   justify-self: stretch;
+  text-align: center;
 
   &--secondary {
     color: $f-main;
