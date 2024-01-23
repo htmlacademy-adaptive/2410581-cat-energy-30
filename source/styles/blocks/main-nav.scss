@@ -35,15 +35,21 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 475px;
     position: relative;
     top: 0;
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 34px;
+    gap: 10px 34px;
 
     &--closed {
       display: flex;
       pointer-events: all;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
   }
 }
 
@@ -88,10 +94,14 @@
   @media (min-width: $tablet-width) {
     padding: 8px 0 10px;
 
+    &--no-js::before {
+      left: 0;
+    }
+
     &--current::before {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 2px;
       width: 100%;
       height: 2px;
       background-color: #68b738;
@@ -106,6 +116,10 @@
   @media (min-width: $desktop-width) {
     padding: 8px 0 6px;
     background-color: transparent;
+
+    &--current::before {
+      bottom: 0;
+    }
 
     &--current-index::before {
       background-color: #ffffff;

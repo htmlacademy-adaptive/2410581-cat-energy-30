@@ -15,11 +15,19 @@
   @include font-setting($secondary-font, 16px, 400, 18px, $f-main);
   position: relative;
   display: grid;
+  // grid-template-columns: auto 1fr;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 13px;
   text-transform: uppercase;
 
+  //доработка
+  // display: flex;
+
+  & span {
+    // display: block;
+    max-width: 110px;
+  }
   // span {
   //   max-width: 67px;
   // }
@@ -69,10 +77,17 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
+
+    & span {
+      // display: block;
+      max-width: 170px;
+    }
   }
 }
 
 .blank__input {
+  // flex-shrink: 0;
+
   &.blank__input--error {
     padding: 13px 14px 12px;
     outline: none;
@@ -97,7 +112,7 @@
   @media (min-width: $tablet-width) {
     &--extra {
       display: grid;
-      grid-template-columns: repeat(auto-fit, 284px);
+      grid-template-columns: repeat(auto-fit, 282px);
       gap: 32px 60px;
     }
   }
@@ -107,6 +122,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 80px;
+      margin-bottom: -9px;
     }
   }
 }
@@ -159,10 +175,14 @@
     & span br {
       display: none;
     }
+
+    &::before {
+      top: 22px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 74px;
+    margin-bottom: 52px;
     grid-column: 1 / -1;
 
     &--extra {

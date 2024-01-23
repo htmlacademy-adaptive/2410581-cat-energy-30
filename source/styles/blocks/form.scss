@@ -103,13 +103,14 @@
     &--choose-program {
       padding: 25px 27px;
       grid-column: 2 / 3;
+      align-self: start;
     }
 
     &--contacts {
       padding: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 0 80px;
+      gap: 20px 80px;
     }
 
     &--comments {

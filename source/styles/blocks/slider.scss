@@ -160,8 +160,18 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    min-height: 462px;
+    height: 462px;
     background-color: #eaeaea;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      left: 0;
+      background-color: #eaeaea;
+      box-shadow: -200px 0 0 #eaeaea;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -169,6 +179,10 @@
     top: 0;
     padding: 0;
     background-color: transparent;
+
+    &::before {
+      display: none;
+    }
   }
 }
 

@@ -4,9 +4,22 @@
 }
 
 .hero__container {
-  padding: 23px 20px 0 20px;
+  padding: 27px 20px 0 20px;
+
+  @media (max-width: 767.8px) {
+    background:
+      linear-gradient(to bottom,
+        transparent 302px,
+        #64a83d 302px,
+        #64a83d 58%,
+        transparent 58%,
+        transparent 100%);
+  }
 
   @media (min-width: $tablet-width) {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 46px 30px 0;
   }
 
@@ -14,7 +27,7 @@
     position: relative;
     margin: 0 auto;
     max-width: 1440px;
-    padding: 106px 110px 179px 190px;
+    padding: 106px 803px 179px 190px;
   }
 }
 
@@ -66,11 +79,12 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    display: block;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 29px;
+    top: 25px;
     left: 557px;
   }
 }
@@ -83,6 +97,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     position: absolute;
     bottom: 526px;
     left: 120px;
@@ -96,6 +111,5 @@
     position: relative;
     bottom: 0;
     left: 0;
-    margin: 0;
   }
 }
