@@ -19,10 +19,10 @@
 .toggle-burger__line2,
 .toggle-burger__line3 {
   position: absolute;
+  left: -1px;
   width: 100%;
   height: 2px;
-  background-color: #000000;
-  left: -1px;
+  background-color: $f-secondary;
   transition: all 0.3s ease 0s;
 }
 

@@ -5,7 +5,7 @@
   gap: 15px;
 
   &:hover .control__mark {
-    border-color: #bababa;
+    border-color: $bg-secondary-rare;
   }
 
   @media (min-width: $tablet-width) {
@@ -31,7 +31,7 @@
   &[type="radio"]:checked + .control__mark::before {
     width: 13px;
     height: 13px;
-    background-color: #68b738;
+    background-color: $bg-main;
     border-radius: 50%;
   }
 
@@ -42,7 +42,7 @@
   }
 
   &:focus-visible + .control__mark {
-    border: 2px solid #bababa;
+    border: 2px solid $bg-secondary-rare;
   }
 
   @media (min-width: $tablet-width) {
@@ -64,7 +64,7 @@
   left: 0;
   width: 30px;
   height: 30px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $bg-secondary-dull;
   border-radius: 50%;
 
   &--extra {

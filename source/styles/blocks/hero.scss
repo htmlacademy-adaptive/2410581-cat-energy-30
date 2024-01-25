@@ -24,8 +24,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    margin: 0 auto;
     max-width: 1440px;
     padding: 106px 803px 179px 190px;
   }
@@ -42,7 +40,7 @@
     padding-left: 90px;
     font-size: 60px;
     line-height: 60px;
-    color: #000000;
+    color: $f-secondary;
     text-align: start;
   }
 
@@ -63,7 +61,7 @@
     padding-left: 90px;
     font-size: 20px;
     line-height: 20px;
-    color: #000000;
+    color: $f-secondary;
     text-align: start;
   }
 
@@ -91,18 +89,18 @@
 
 .hero__button {
   display: block;
-  margin: 0 auto;
   width: 100%;
   max-width: 400px;
+  margin: 0 auto;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     position: absolute;
     bottom: 526px;
     left: 120px;
-    padding: 14px 26px;
     max-width: 244px;
+    margin: 0;
+    padding: 14px 26px;
     font-size: 20px;
     line-height: 26px;
   }

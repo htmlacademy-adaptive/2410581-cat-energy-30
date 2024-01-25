@@ -4,7 +4,7 @@
   list-style-type: none;
 }
 
-@mixin font-setting($f-family: $primary-font, $f-size: 14px, $f-weight: 400, $f-height: 18px, $f-color: #444444) {
+@mixin font-setting($f-family: $primary-font, $f-size: 14px, $f-weight: 400, $f-height: 18px, $f-color: $f-main) {
   font-family: $f-family;
   font-size: $f-size;
   font-weight: $f-weight;

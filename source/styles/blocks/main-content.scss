@@ -1,6 +1,6 @@
 .main-content {
   flex-grow: 1;
-  background-color: $bg-primary;
+  background-color: $f-highlighted;
 
   @media (min-width: $tablet-width) {
     &--catalog {

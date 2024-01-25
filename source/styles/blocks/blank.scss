@@ -15,37 +15,16 @@
   @include font-setting($secondary-font, 16px, 400, 18px, $f-main);
   position: relative;
   display: grid;
-  // grid-template-columns: auto 1fr;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 13px;
   text-transform: uppercase;
 
-  //доработка
-  // display: flex;
-
   & span {
-    // display: block;
     max-width: 110px;
   }
-  // span {
-  //   max-width: 67px;
-  // }
 
-  &:has(.blank__input[type="email"])::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    right: 12px;
-    mask-image: url("../../images/icons/email-icon.svg");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    background-color: #222222;
-    translate: 0 -50%;
-  }
-
+  &:has(.blank__input[type="email"])::before,
   &:has(.blank__input[type="tel"])::before {
     content: "";
     position: absolute;
@@ -53,25 +32,32 @@
     height: 20px;
     top: 50%;
     right: 12px;
-    mask-image: url("../../images/icons/phone-icon.svg");
     mask-repeat: no-repeat;
     mask-position: center;
-    background-color: #222222;
+    background-color: $f-minor;
     translate: 0 -50%;
   }
 
-  &:has(.blank__input.blank__input--error)::before {
-    background-color: #ff8282;
+  &:has(.blank__input[type="email"])::before {
+    mask-image: url("../../images/icons/email-icon.svg");
   }
 
-  &:has(.blank__input.blank__input--error:hover)::before,
-  &:has(.blank__input.blank__input--error:focus)::before,
-  &:has(.blank__input.blank__input--error:active)::before {
-    background-color: #b63841;
+  &:has(.blank__input[type="tel"])::before {
+    mask-image: url("../../images/icons/phone-icon.svg");
+  }
+
+  &:has(.blank__input.blank__input--error:required)::before {
+    background-color: $error;
+  }
+
+  &:has(.blank__input.blank__input--error:required:hover)::before,
+  &:has(.blank__input.blank__input--error:required:focus)::before,
+  &:has(.blank__input.blank__input--error:required:active)::before {
+    background-color: $error-minor;
   }
 
   &:has(.blank__input:focus)::before {
-    background-color: #68b738;
+    background-color: $bg-main;
   }
 
   @media (min-width: $tablet-width) {
@@ -79,23 +65,29 @@
     line-height: normal;
 
     & span {
-      // display: block;
       max-width: 170px;
     }
   }
 }
 
 .blank__input {
-  // flex-shrink: 0;
-
-  &.blank__input--error {
+  &.blank__input--error:required {
     padding: 13px 14px 12px;
     outline: none;
-    border: 2px solid #ff8282;
+    border: 2px solid $error;
 
     &:hover,
     &:focus {
-      border-color: #b63841;
+      border-color: $error-minor;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: rgba(68, 68, 68, 0.3);
+
+    &:active {
+      padding: 11px 20px;
     }
   }
 }
@@ -105,9 +97,6 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
-
-  // &--extra {
-  // }
 
   @media (min-width: $tablet-width) {
     &--extra {
@@ -119,16 +108,12 @@
 
   @media (min-width: $desktop-width) {
     &--extra {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 80px;
       margin-bottom: -9px;
     }
   }
 }
-
-// .blank__item {
-// }
 
 .blank__title {
   @include font-setting($secondary-font, 24px, 400, 26px, $f-secondary);
@@ -140,23 +125,21 @@
   z-index: 2;
 
   & span {
-    display: block;
     position: relative;
     z-index: 2;
-    background-color: #ffffff;
-    box-shadow: -20px 0 0 #ffffff, 20px 0 0 #ffffff;
+    background-color: $f-highlighted;
+    box-shadow: -20px 0 0 $f-highlighted, 20px 0 0 $f-highlighted;
   }
 
   &::before {
     content: "";
-    display: block;
     position: absolute;
     top: 17px;
     right: 0;
     width: 100vw;
     height: 2px;
-    box-shadow: 100vw 0 0 #68b738;
-    background-color: #68b738;
+    box-shadow: 100vw 0 0 $bg-main;
+    background-color: $bg-main;
   }
 
   @media (min-width: $tablet-width) {
@@ -169,7 +152,7 @@
     }
 
     & span {
-      box-shadow: -40px 0 0 #ffffff, 40px 0 0 #ffffff;
+      box-shadow: -40px 0 0 $f-highlighted, 40px 0 0 $f-highlighted;
     }
 
     & span br {
@@ -190,9 +173,6 @@
     }
   }
 }
-
-// .blank__comment {
-// }
 
 .blank__label {
   grid-column: 1 / 2;

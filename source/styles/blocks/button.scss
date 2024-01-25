@@ -3,14 +3,14 @@
 
   padding: 10px 44px;
   text-transform: uppercase;
-  background-color: $b-primary;
+  background-color: $bg-main;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: $bg-main-dim;
     transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   }
 

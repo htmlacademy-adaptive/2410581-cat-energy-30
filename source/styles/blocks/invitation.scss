@@ -1,12 +1,9 @@
-// .invitation {
-// }
-
 .invitation__container {
-  background-color: $bg-primary;
   padding-top: 26px;
+  background-color: $f-highlighted;
 
   &--secondary {
-    background-color: #f2f2f2;
+    background-color: $bg-secondary;
   }
 
   @media (min-width: $tablet-width) {
@@ -15,7 +12,6 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    // доработка
     display: grid;
     grid-template-columns: 110px 565px 1fr;
     grid-template-rows: 95px 1fr 106px;
@@ -23,9 +19,9 @@
 }
 
 .invitation__content {
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 20px;
   z-index: 2;
 
   @media (min-width: $tablet-width) {
@@ -37,20 +33,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    // position: absolute;
-    // top: 95px;
-    // left: 110px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 93px;
-    background-color: #ffffff;
-    padding: 61px 79px 60px;
-
-    // доработка
     position: relative;
     top: 0;
     left: 0;
     grid-area: 2 / 2 / 3 / 3;
+    padding: 61px 79px 60px;
+    grid-template-columns: 1fr 1fr;
+    gap: 93px;
+    background-color: $f-highlighted;
   }
 }
 
@@ -84,7 +74,6 @@
     line-height: 20px;
     margin-bottom: 0;
     text-align: right;
-    // justify-content: space-between;
 
     & span br {
       display: block;
@@ -119,11 +108,11 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: 100%;
     background-image:
       image-set(
         url("../../images/map/map-desktop@1x.png") type("image/png") 1x,
         url("../../images/map/map-desktop@2x.png") type("image/png") 2x);
     grid-area: 1 / 1 / -1 / -1;
-    height: 100%;
   }
 }
