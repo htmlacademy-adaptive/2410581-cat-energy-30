@@ -29,7 +29,7 @@
   background-color: $f-highlighted;
   box-shadow: -20px 0 0 $f-highlighted, 20px 0 0 $f-highlighted;
 
-  & span {
+  span {
     position: relative;
     background-color: $f-highlighted;
     box-shadow: -20px 0 0 $f-highlighted, 20px 0 0 $f-highlighted;
@@ -57,7 +57,7 @@
       top: 22px;
     }
 
-    & span {
+    span {
       box-shadow: -40px 0 0 $f-highlighted, 40px 0 0 $f-highlighted;
     }
   }
