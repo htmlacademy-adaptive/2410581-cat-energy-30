@@ -109,6 +109,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     padding: 77px 43px 59px 52px;

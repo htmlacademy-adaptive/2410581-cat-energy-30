@@ -3,9 +3,30 @@
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 15px;
+  transition: all 0.3s ease 0s;
 
   &:hover .control__mark {
     border-color: $bg-secondary-rare;
+  }
+
+  &:hover > .control__label {
+    opacity: 0.6;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:active > .control__label {
+    opacity: 0.3;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:has(.control__input:focus) > .control__label {
+    opacity: 0.6;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:has(.control__input:active) > .control__label {
+    opacity: 0.3;
+    transition: all 0.3s ease 0s;
   }
 
   @media (min-width: $tablet-width) {

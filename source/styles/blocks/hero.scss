@@ -76,11 +76,15 @@
   margin: 0 auto 3px;
 
   @media (min-width: $tablet-width) {
+    width: 709px;
+    height: 609px;
     margin: 0;
     display: block;
   }
 
   @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
     position: absolute;
     top: 25px;
     left: 557px;

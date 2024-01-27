@@ -28,8 +28,8 @@
   &:has(.blank__input[type="tel"])::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     top: 50%;
     right: 12px;
     mask-repeat: no-repeat;
@@ -64,8 +64,20 @@
     font-size: 20px;
     line-height: normal;
 
+    &:has(.blank__input[type="email"])::before,
+    &:has(.blank__input[type="tel"])::before {
+      right: 13px;
+    }
+
     & span {
       max-width: 170px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:has(.blank__input[type="email"])::before,
+    &:has(.blank__input[type="tel"])::before {
+      right: 15px;
     }
   }
 }
@@ -126,6 +138,7 @@
 
   & span {
     position: relative;
+    display: block;
     z-index: 2;
     background-color: $f-highlighted;
     box-shadow: -20px 0 0 $f-highlighted, 20px 0 0 $f-highlighted;
