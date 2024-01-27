@@ -2,9 +2,20 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
+    top: -13px;
     width: 100%;
-    max-height: 462px;
-    background-color: #eaeaea;
+    height: 462px;
+    background-color: $bg-extra-dull;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background-color: $bg-extra-dull;
+      box-shadow: -200px 0 0 $bg-extra-dull;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -12,6 +23,10 @@
     top: 0;
     padding: 0;
     background-color: transparent;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -30,126 +45,127 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;
-    right: 110px;
+    left: 770px;
     margin: 0;
   }
 }
 
 .slider__images {
-  display: flex;
+  @include list-resseting;
   width: 100%;
   height: 100%;
+  display: flex;
 }
 
-.slider__image-before {
-  position: absolute;
+.slider__image--after {
   width: 100%;
   height: 100%;
+  position: absolute;
+}
+
+.slider__before {
+  width: 100%;
+  height: 100%;
+  display: block;
   clip-path: inset(0 50% 0 0);
 }
 
-.slider__image-after {
-  position: absolute;
+.slider__after {
   width: 100%;
   height: 100%;
+  display: block;
   clip-path: inset(0 0 0 50%);
 }
 
-.slider__main-slider {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
 .slider__input {
-  width: 100%;
-  background: none;
-  outline: none;
-  appearance: none;
-
-  &::-webkit-slider-thumb {
-    width: 4px;
-    height: 256px;
-    appearance: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    &::-webkit-slider-thumb {
-      height: 512px;
-    }
-  }
-}
-
-.slider__drag-line {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 4px;
-  height: 256px;
-  transform: translateX(-50%);
-  pointer-events: none;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 108px;
-    background-color: #666666;
-  }
-
-  &::before {
-    top: 0;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-  }
-
-  &::after {
-    bottom: 0;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-  }
-
-  @media (min-width: $tablet-width) {
-    height: 512px;
-
-    &::before,
-    &::after {
-      height: 236px;
-    }
-  }
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.slider__marker {
+.slider__button {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   width: 40px;
   height: 40px;
-  border: 2px solid #666666;
+  background-color: $f-highlighted;
+  border: 2px solid $f-average;
   border-radius: 50%;
-  background-color: #ffffff;
-  transform: translate(-50%, -50%);
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: 50%;
-    content: "";
-    border: 13px solid transparent;
-    border-bottom-width: 0;
-    border-right-width: 0;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
+  translate: -50% -50%;
+  cursor: pointer;
 
   &::before {
-    left: 40%;
-    border-left-color: #666666;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../images/icons/slider.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $f-average;
+    translate: -50% -50%;
   }
 
   &::after {
-    left: 60%;
-    border-top-color: #666666;
+    content: "";
+    position: absolute;
+    top: -108px;
+    left: 50%;
+    width: 4px;
+    height: 108px;
+    background-color: $f-average;
+    translate: -50% 0;
+    box-shadow: 0 144px 0 0 $f-average;
+  }
+
+  &:hover {
+    border-color: $bg-main;
+
+    &::before {
+      background-color: $bg-main;
+    }
+
+    &::after {
+      background-color: $bg-main;
+      box-shadow: 0 144px 0 0 $bg-main;
+    }
+  }
+
+  &:active {
+    border-color: rgba(94, 170, 47, 0.6);
+
+    &::before {
+      background-color: rgba(94, 170, 47, 0.6);
+    }
+
+    &::after {
+      background-color: rgba(94, 170, 47, 0.6);
+      box-shadow: 0 144px 0 0 rgba(94, 170, 47, 0.6);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: -236px;
+      height: 236px;
+      box-shadow: 0 274px 0 0 $f-average;
+    }
+
+    &:hover {
+      &::after {
+        box-shadow: 0 274px 0 0 $bg-main;
+      }
+    }
+
+    &:active {
+      &::after {
+        box-shadow: 0 274px 0 0 rgba(94, 170, 47, 0.6);
+      }
+    }
   }
 }

@@ -1,14 +1,20 @@
 .form-main {
   flex-grow: 1;
-  background-color: $bg-primary;
+}
+
+.form-main__container {
   padding: 27px 20px 32px;
+  background-color: $f-highlighted;
 
   @media (min-width: $tablet-width) {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 46px 70px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 70px 110px 69px;
+    max-width: $desktop-width;
+    padding: 70px 110px 78px;
   }
 }
 
@@ -37,8 +43,12 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 64px;
+    margin-bottom: 36px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
   }
 }

@@ -1,8 +1,31 @@
 .button {
   @include font-setting($secondary-font, 16px, 400, 20px, $f-highlighted);
 
+  display: block;
   padding: 10px 44px;
   text-transform: uppercase;
-  background-color: $b-primary;
+  background-color: $bg-main;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-main-dim;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 30px;
+  }
 }

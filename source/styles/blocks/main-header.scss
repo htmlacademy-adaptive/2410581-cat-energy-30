@@ -1,36 +1,56 @@
-// .main-header {
-// }
-
 .main-header__container {
-  display: flex;
-  align-items: center;
   padding: 13px 20px 10px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: $f-highlighted;
+  border-bottom: 1px solid $bg-extra-sparse;
+
+  &--no-js {
+    display: grid;
+    padding-bottom: 0;
+  }
 
   &--index {
+    position: relative;
     border-bottom: none;
 
     &::after {
       content: "";
       position: absolute;
-      left: 0;
-      top: 65px;
-      display: block;
-      width: 100%;
+      left: 50%;
+      bottom: -302px;
+      width: 320px;
       height: 302px;
-      background: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/backgrounds/hero-cat-mobile@2x.jpg");
+      background:
+        linear-gradient(
+          rgba(104, 183, 56, 0.85) 0%,
+          rgba(104, 183, 56, 0.85) 100%),
+        image-set(
+          url("../../images/backgrounds/hero-cat-mobile@1x.webp") type("image/webp") 1x,
+          url("../../images/backgrounds/hero-cat-mobile@2x.webp") type("image/webp") 2x,
+          url("../../images/backgrounds/hero-cat-mobile@1x.jpg") type("image/jpeg") 1x,
+          url("../../images/backgrounds/hero-cat-mobile@2x.jpg") type("image/jpeg") 2x,
+        );
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      translate: -50% 0;
+      box-shadow: 320px 0 0 0 #62a63b, -320px 0 0 0 #64a83d;
       z-index: 1;
     }
   }
 
 
   @media (min-width: $tablet-width) {
+    max-width: 1100px;
+    margin: 0 auto;
     border-bottom: none;
     padding: 25px 34px 15px 30px;
+
+    &--no-js {
+      display: flex;
+    }
 
     &::after {
       display: none;
@@ -38,28 +58,20 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1440px;
     padding: 55px 110px 0;
-
-    &::after {
-      top: 0;
-      left: 50%;
-      width: 720px;
-      height: 694px;
-      display: block;
-      background: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/backgrounds/hero-cat-desktop@2x.jpg");
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
   }
 }
 
 .main-header__logo {
+  margin-right: auto;
+  align-self: start;
   display: flex;
   align-items: center;
-  margin-right: auto;
   transition: all 0.3s ease 0s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
     transition: all 0.3s ease 0s;
   }
@@ -81,6 +93,3 @@
     margin-right: 14px;
   }
 }
-
-// .main-header__logo-text {
-// }

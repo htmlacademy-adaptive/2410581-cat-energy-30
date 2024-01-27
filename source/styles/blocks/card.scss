@@ -13,7 +13,8 @@
     display: flex;
     gap: 0;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    padding-top: 24px;
   }
 
   &:first-child::after {
@@ -22,7 +23,7 @@
     top: 0;
     width: 100vw;
     height: 1px;
-    background-color: #ebebeb;
+    background-color: $bg-secondary-dim;
   }
 
   &::before {
@@ -31,17 +32,18 @@
     bottom: 0;
     width: 100vw;
     height: 1px;
-    background-color: #ebebeb;
+    background-color: $bg-secondary-dim;
   }
 
   @media (min-width: $tablet-width) {
     min-width: 324px;
+    min-height: 511px;
     margin: 0;
     padding: 10px 37px 40px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 0;
-    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 81px, #f2f2f2 81px, #f2f2f2 100%);
+    background-image: linear-gradient(to bottom, $f-highlighted 0, $f-highlighted 81px, $bg-secondary 81px, $bg-secondary 100%);
 
     &::after,
     &::before {
@@ -50,15 +52,36 @@
 
     &--more {
       justify-content: space-between;
-      margin-top: 81px;
-      padding: 50px 20px 40px;
-      border: 2px solid #f2f2f2;
-      background-image: linear-gradient(#ffffff 0, #ffffff 100%);
+      padding: 0;
+      align-items: center;
+      background-image: linear-gradient($f-highlighted 0, $f-highlighted 100%);
     }
   }
 
   @media (min-width: $desktop-width) {
     min-width: 245px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card__more {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    min-height: 429px;
+    margin-top: 82px;
+    padding: 50px 35px 38px;
+    border: 2px solid $bg-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding-top: 47px;
   }
 }
 
@@ -72,6 +95,14 @@
     margin-bottom: 8px;
   }
 
+  &--image {
+    width: 140px;
+    height: 107px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media (min-width: $tablet-width) {
     &--title {
       width: 100%;
@@ -83,6 +114,19 @@
     &--more {
       margin-bottom: 23px;
     }
+
+    &--image {
+      width: 200px;
+      height: 210px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+
+    &--title {
+      margin: 13px 0 22px;
+    }
   }
 }
 
@@ -92,6 +136,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .card__image {
@@ -99,10 +147,7 @@
     position: relative;
     width: 30px;
     height: 30px;
-    margin-bottom: 28px;
-
-    //   &--more {
-    //   }
+    margin-bottom: 24px;
 
     &::before,
     &::after {
@@ -111,7 +156,7 @@
       top: 14px;
       width: 30px;
       height: 2px;
-      background-color: #d3d3d3;
+      background-color: $bg-extra-rare;
     }
 
     &::after {
@@ -124,13 +169,19 @@
       width: 60px;
       height: 60px;
       margin: 0;
-      margin-bottom: 22px;
+      margin-bottom: 48px;
 
       &::before,
       &::after {
         top: 50%;
         width: 60px;
       }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--more {
+      margin-bottom: 42px;
     }
   }
 }
@@ -143,6 +194,7 @@
   &--more {
     margin: 0;
     color: $f-trifle;
+    text-align: center;
   }
 
   @media (min-width: $tablet-width) {
@@ -166,7 +218,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 5px;
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid $bg-secondary-dull;
 
     &:not(:last-child) {
       margin-bottom: 7px;
@@ -188,16 +240,29 @@
 .card__button {
   grid-column: 1 / -1;
   justify-self: stretch;
+  text-align: center;
 
   &--secondary {
     color: $f-main;
     background-color: $bg-secondary;
     align-self: stretch;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $f-main;
+      background-color: $bg-secondary-dim;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: stretch;
   }
 }
-
-// .card__valuee {
-// }
 
 .card__text {
   margin-top: 0;
@@ -207,9 +272,9 @@
 
   @media (min-width: $tablet-width) {
     width: 170px;
+    margin-bottom: auto;
     font-size: 16px;
     line-height: 18px;
     text-align: center;
-    margin-bottom: auto;
   }
 }

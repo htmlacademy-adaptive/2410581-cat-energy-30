@@ -1,12 +1,9 @@
-// .invitation {
-// }
-
 .invitation__container {
-  background-color: $bg-primary;
   padding-top: 26px;
+  background-color: $f-highlighted;
 
   &--secondary {
-    background-color: #f2f2f2;
+    background-color: $bg-secondary;
   }
 
   @media (min-width: $tablet-width) {
@@ -15,29 +12,39 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    display: grid;
+    grid-template-columns: 110px 565px 1fr;
+    grid-template-rows: 95px 1fr 106px;
   }
 }
 
 .invitation__content {
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 20px;
   z-index: 2;
 
   @media (min-width: $tablet-width) {
-    padding: 61px 70px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 49px 70px 59px;
+    gap: 10px;
     align-items: center;
+
+    &--more {
+      padding-top: 62px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-    display: grid;
+    position: relative;
+    top: 0;
+    left: 0;
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 61px 79px 60px;
     grid-template-columns: 1fr 1fr;
     gap: 93px;
-    background-color: #ffffff;
-    padding: 61px 79px 60px;
+    background-color: $f-highlighted;
   }
 }
 
@@ -67,7 +74,11 @@
     line-height: 20px;
     margin-bottom: 0;
     text-align: right;
-    justify-content: space-between;
+
+    & span {
+      display: block;
+      margin-top: 17px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -83,16 +94,26 @@
 .invitation__map-container {
   width: 100%;
   height: 362px;
-  background-image: image-set(url("../../images/map/map-mobile@1x.png") type("image/png") 1x, url("../../images/map/map-mobile@2x.png") type("image/png") 2x);
+  background-image:
+    image-set(url("../../images/map/map-mobile@1x.png") type("image/png") 1x,
+    url("../../images/map/map-mobile@2x.png") type("image/png") 2x);
   background-repeat: no-repeat;
   background-position: center;
 
   @media (min-width: $tablet-width) {
     height: 400px;
-    background-image: image-set(url("../../images/map/map-tablet@1x.png") type("image/png") 1x, url("../../images/map/map-tablet@2x.png") type("image/png") 2x);
+    background-image:
+      image-set(
+        url("../../images/map/map-tablet@1x.png") type("image/png") 1x,
+        url("../../images/map/map-tablet@2x.png") type("image/png") 2x);
   }
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(url("../../images/map/map-desktop@1x.png") type("image/png") 1x, url("../../images/map/map-desktop@2x.png") type("image/png") 2x);
+    height: 100%;
+    background-image:
+      image-set(
+        url("../../images/map/map-desktop@1x.png") type("image/png") 1x,
+        url("../../images/map/map-desktop@2x.png") type("image/png") 2x);
+    grid-area: 1 / 1 / -1 / -1;
   }
 }
